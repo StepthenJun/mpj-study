@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sosd.mpjstudy.generator.mapper.UserProductMapper">
+
+    <resultMap id="BaseResultMap" type="com.sosd.mpjstudy.generator.domain.UserProduct">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="productId" column="product_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,product_id
+    </sql>
+
+  <select id="getUserProductDetails" resultType="com.sosd.mpjstudy.generator.domain.vo.UserProductVO">
+    SELECT u.user_name AS userName, p.product_name AS productName, p.price
+    FROM user_product up
+           JOIN user u ON up.user_id = u.id
+           JOIN product p ON up.product_id = p.id
+  </select>
+</mapper>
