@@ -11,5 +11,8 @@ import java.util.List;
 * @createDate 2024-11-22 01:32:03
 */
 public interface UserProductService extends IService<UserProduct> {
+
   List<UserProductVO> getUserProductDetails();
+
+  List<UserProductVO> getUserProductDetailsByMpj();
 }

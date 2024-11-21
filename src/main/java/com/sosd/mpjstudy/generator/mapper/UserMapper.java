@@ -1,7 +1,7 @@
 package com.sosd.mpjstudy.generator.mapper;
 
+import com.github.yulichang.base.MPJBaseMapper;
 import com.sosd.mpjstudy.generator.domain.User;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -11,7 +11,7 @@ import org.apache.ibatis.annotations.Mapper;
 * @Entity generator.domain.User
 */
 @Mapper
-public interface UserMapper extends BaseMapper<User> {
+public interface UserMapper extends MPJBaseMapper<User> {
 
 }
 

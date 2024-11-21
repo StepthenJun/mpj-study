@@ -1,5 +1,6 @@
 package com.sosd.mpjstudy.generator.mapper;
 
+import com.github.yulichang.base.MPJBaseMapper;
 import com.sosd.mpjstudy.generator.domain.Product;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
@@ -11,7 +12,7 @@ import org.apache.ibatis.annotations.Mapper;
 * @Entity generator.domain.Product
 */
 @Mapper
-public interface ProductMapper extends BaseMapper<Product> {
+public interface ProductMapper extends MPJBaseMapper<Product> {
 
 }
 

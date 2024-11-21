@@ -6,6 +6,7 @@ import com.sosd.mpjstudy.generator.domain.User;
 import com.sosd.mpjstudy.generator.domain.UserProduct;
 import com.sosd.mpjstudy.generator.domain.vo.UserProductVO;
 import com.sosd.mpjstudy.generator.mapper.ProductMapper;
+
 import com.sosd.mpjstudy.generator.mapper.UserMapper;
 import com.sosd.mpjstudy.generator.mapper.UserProductMapper;
 import com.sosd.mpjstudy.generator.service.UserProductService;
@@ -48,7 +49,20 @@ class MpjStudyApplicationTests {
       System.out.println("--------------------------------");
     });
     System.out.println("================================");
+  }
 
+  @Test
+  void testMpjJoin(){
+    List<UserProductVO> userProductDetails = userProductService.getUserProductDetailsByMpj();
+
+    System.out.println("===== User Product Details =====");
+    userProductDetails.forEach(detail -> {
+      System.out.println("--------------------------------");
+      System.out.println("User Name: " + detail.getUserName());
+      System.out.println("Product Name: " + detail.getProductName());
+      System.out.println("--------------------------------");
+    });
+    System.out.println("================================");
   }
 
   @Test

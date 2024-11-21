@@ -1,5 +1,6 @@
 package com.sosd.mpjstudy.generator.mapper;
 
+import com.github.yulichang.base.MPJBaseMapper;
 import com.sosd.mpjstudy.generator.domain.UserProduct;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.sosd.mpjstudy.generator.domain.vo.UserProductVO;
@@ -13,7 +14,7 @@ import org.apache.ibatis.annotations.Mapper;
 * @Entity generator.domain.UserProduct
 */
 @Mapper
-public interface UserProductMapper extends BaseMapper<UserProduct> {
+public interface UserProductMapper extends MPJBaseMapper<UserProduct> {
 
   List<UserProductVO> getUserProductDetails();
 }
