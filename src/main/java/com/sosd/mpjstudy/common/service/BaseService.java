@@ -16,7 +16,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Slf4j
 public abstract class BaseService<T, E, S> extends ServiceImpl<MPJBaseMapper<E>, E>
     implements IBaseService<T, E, S> {
-  @Autowired private MPJBaseMapper<E> mapper;
+
+  @Autowired
+  private MPJBaseMapper<E> mapper;
   private final Class<T> classT;
 
   public BaseService() {
